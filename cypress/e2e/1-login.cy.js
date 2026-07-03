@@ -4,6 +4,10 @@ describe('Login', () => {
     cy.login();
     cy.url().should('include', '/inventory.html');
     cy.get('.title').should('have.text', 'Products');
+    // aguarda as imagens dos produtos carregarem antes da captura de tela
+    cy.get('img.inventory_item_img').should(($imgs) => {
+      $imgs.each((_, img) => expect(img.naturalWidth).to.be.greaterThan(0));
+    });
     cy.screenshot('login-sucesso');
   });
 

@@ -1,0 +1,16 @@
+{
+  "name": "cch-cypress-saucedemo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cy:open": "cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Testes automatizados do Sauce Demo com Cypress (trabalho CCH - Teste de Software)",
+  "devDependencies": {
+    "cypress": "^15.18.0"
+  }
+}
